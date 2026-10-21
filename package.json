@@ -1,5 +1,5 @@
 {
-  "name": "vuln-lab-app",
+  "name": "bac-detection-and-incident-response",
   "version": "1.0.0",
   "description": "Broken access control detection & incident response lab (OWASP A01) — Node/Express + SQLite: denial logging, detection rules, auto-lock, admin dashboard, and a scripted attack simulation with 21 assertions.",
   "main": "server.js",

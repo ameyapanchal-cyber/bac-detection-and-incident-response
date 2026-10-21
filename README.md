@@ -1,4 +1,4 @@
-# vuln-lab-app — Broken Access Control Detection & Incident Response
+# bac-detection-and-incident-response — Broken Access Control Detection & Incident Response
 
 **A deliberately vulnerable Node/Express lab app that detects OWASP A01 broken-access-control attempts and responds to them automatically** — logging every unauthorized access attempt, flagging attack patterns with detection rules, auto-locking the offender's session and account, and giving an admin a live dashboard to investigate and release.
 
@@ -102,8 +102,8 @@ Before the detection engine, the app was built **vulnerable first, then broken, 
 **Requirements:** Node.js 18+ (tested on 24) and npm. No database server needed — SQLite file is created automatically.
 
 ```bash
-git clone https://github.com/ameyapanchal-cyber/vuln-lab-app.git
-cd vuln-lab-app
+git clone https://github.com/ameyapanchal-cyber/bac-detection-and-incident-response.git
+cd bac-detection-and-incident-response
 npm install
 npm start          # → http://localhost:3000
 ```
