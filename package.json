@@ -1,0 +1,18 @@
+{
+  "name": "vuln-lab-app",
+  "version": "1.0.0",
+  "description": "Broken access control detection & incident response lab (OWASP A01) — Node/Express + SQLite: denial logging, detection rules, auto-lock, admin dashboard, and a scripted attack simulation with 21 assertions.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node attack-sim.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7",
+    "express-session": "^1.18.0"
+  },
+  "allowScripts": {
+    "sqlite3@5.1.7": true
+  }
+}
