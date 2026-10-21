@@ -138,6 +138,7 @@ node attack-sim.js   # 7 acts, 21 assertions, exit 0 = all green
 4. **No CSP header.** A real deployment should add `Content-Security-Policy` as defence-in-depth; it is a documented gap here, not a mitigation for the XSS exercise.
 5. **`/dashboard/unlock` identifies a lock by array index.** If two admins open the dashboard at once, an index can go stale (`splice` shifts the rest). Production would address locks by an immutable ID.
 6. **In-memory session store.** `express-session` keeps sessions in memory — restarting the app logs everyone out. Production uses Redis or a similar store.
+7. **The session secret is a hardcoded lab constant** (`'labsecret'` in `server.js`). It keeps the lab reproducible and offline; a real deployment must read it from an environment variable (`process.env.SESSION_SECRET`) and rotate it. This is listed here rather than hidden — it is a real weakness of the lab as shipped.
 
 ---
 
