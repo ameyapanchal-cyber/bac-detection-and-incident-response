@@ -9,7 +9,7 @@
 //   repeatable PASS/FAIL proof for the report.
 //
 // How to run (server must be up in another terminal):
-//   cd ~/VAPT_Hunt/audit-engine/lab-app && npm start     (terminal 1)
+//   cd bac-detection-and-incident-response && npm start   (terminal 1)
 //   node attack-sim.js                                   (terminal 2)
 //
 // Two lessons from debugging W2-4 tests (do NOT repeat):

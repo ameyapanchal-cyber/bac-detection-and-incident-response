@@ -139,6 +139,7 @@ node attack-sim.js   # 7 acts, 21 assertions, exit 0 = all green
 5. **`/dashboard/unlock` identifies a lock by array index.** If two admins open the dashboard at once, an index can go stale (`splice` shifts the rest). Production would address locks by an immutable ID.
 6. **In-memory session store.** `express-session` keeps sessions in memory — restarting the app logs everyone out. Production uses Redis or a similar store.
 7. **The session secret is a hardcoded lab constant** (`'labsecret'` in `server.js`). It keeps the lab reproducible and offline; a real deployment must read it from an environment variable (`process.env.SESSION_SECRET`) and rotate it. This is listed here rather than hidden — it is a real weakness of the lab as shipped.
+8. **`attack-sim.js` asserts against a dedicated server instance:** it shares the app's in-memory alert/lock state, so a browser session open at the same time changes the expected counts. Run it on a clean server (no browser) — a fresh run is 21/21.
 
 ---
 
